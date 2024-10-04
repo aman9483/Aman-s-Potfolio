@@ -1,0 +1,238 @@
+{
+  "data": {
+    "data": [
+      {
+        "id": 1,
+        "title": "CoffeeCove: Premium Coffee Buying Shop",
+        "content": "Full Stack Coffee Shop . CoffeCove offers a curated selection of premium coffee blends and brews. Explore our diverse range of flavors, enjoy detailed product descriptions, and experience a seamless shopping journey for all your coffee needs.",
+        "imgurl": "/projectSS/coffe.png",
+        "githubLink": "https://github.com/Nick-h4ck3r/quickflow",
+        "deployedLink": "https://quickflow-jet.vercel.app/",
+        "tech": [
+          {
+            "tech": "/skillsLogos/react.png"
+          },
+          {
+            "tech": "/skillsLogos/tailwind.png"
+          },
+
+          {
+            "tech": "/skillsLogos/node.png"
+          },
+          {
+           "tech": "/skillsLogos/express.png"
+          },
+
+          {
+             "tech": "/skillsLogos/mongodb.png"
+          },
+          {
+            "tech": "/skillsLogos/shadcn.png"
+          },
+          {
+            "tech": "/skillsLogos/framer.png"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "UrbanValley: Modern Clothing Shop",
+        "content": "Full Stack Clothing Shop. UrbanValley is your go-to destination for trendy and stylish clothing options. Discover our versatile collections for men, women, and kids. Enjoy easy navigation and a smooth shopping experience.",
+        "imgurl": "/projectSS/cloth.png",
+        "githubLink": "https://github.com/Nick-h4ck3r/airstay",
+        "deployedLink": "https://airstay.vercel.app/",
+        "tech": [
+          {
+            "tech": "/skillsLogos/react.png"
+          },
+          {
+            "tech": "/skillsLogos/tailwind.png"
+          },
+
+          {
+            "tech": "/skillsLogos/node.png"
+          },
+          {
+           "tech": "/skillsLogos/express.png"
+          },
+
+          {
+             "tech": "/skillsLogos/mongodb.png"
+          },
+          {
+            "tech": "/skillsLogos/shadcn.png"
+          },
+          {
+            "tech": "/skillsLogos/framer.png"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "StayEase: Hotel Room Booking",
+        "content": "Full Stack Hotel Room Booking Application. Search, Filter Features. User Can Login and Explore Diverse Hotels Using Location. Admin Panel.",
+        "imgurl": "/projectSS/room.png",
+        "githubLink": "https://github.com/aman9483/StayEase-Full-Fledged-Hotel-Room-Booking-Web-App",
+        "deployedLink": "https://stayease01.netlify.app/",
+        "tech": [
+          {
+            "tech": "/skillsLogos/react.png"
+          },
+          {
+            "tech": "/skillsLogos/tailwind.png"
+          },
+
+          {
+            "tech": "/skillsLogos/node.png"
+          },
+          {
+           "tech": "/skillsLogos/express.png"
+          },
+
+          {
+             "tech": "/skillsLogos/mongodb.png"
+          }
+          
+        ]
+      },
+      {
+        "id": 4,
+        "title": "BookByte: Online Book Shop",
+        "content":"Full Stack Book Store Application With Payment Integration And Firebase Authentication, Search, Filter & Pagination Features. Admin Panel.",
+        "imgurl": "/projectSS/book.png",
+        "githubLink": "https://github.com/aman9483/BookByte-Full-Stack-Ecommerce-Web-Application",
+        "deployedLink": "https://bookbytes-xl20.onrender.com/",
+        "tech": [
+          {
+            "tech": "/skillsLogos/react.png"
+          },
+          {
+            "tech": "/skillsLogos/tailwind.png"
+          },
+
+          {
+            "tech": "/skillsLogos/node.png"
+          },
+          {
+           "tech": "/skillsLogos/express.png"
+          },
+
+          {
+             "tech": "/skillsLogos/mongodb.png"
+          }
+          
+        ]
+      },
+
+      {
+        "id": 6,
+        "title": "SnapShare: Social Media Post Sharing Platform",
+        "content": "SnapShare is a full-stack social media platform that allows users to share, edit, and manage posts effortlessly. Built with React.js and Material-UI for a responsive frontend, the application uses Express.js for server-side processing and MongoDB for storing and managing user data, offering a smooth and scalable user experience.",
+        "imgurl": "/projectSS/snapshare1.png",
+        "githubLink": "https://github.com/aman9483/snapShare-Web-App",
+        "deployedLink": "https://snapshares.netlify.app/",
+        "tech": [
+          {
+            "tech": "/skillsLogos/react.png"
+          },
+          {
+            "tech": "/skillsLogos/tailwind.png"
+          },
+          {
+            "tech": "/skillsLogos/node.png"
+          },
+          {
+            "tech": "/skillsLogos/express.png"
+          },
+          {
+            "tech": "/skillsLogos/mongodb.png"
+          }
+        ]
+      },
+      
+      {
+        "id": 5,
+        "title": "Pokedex: A Digital Encyclopedia For Pokemon",
+        "content": "Pokédex Web App repository! This web application serves as a digital encyclopedia for Pokémon enthusiasts, enabling users to learn about various Pokémon.",
+        "imgurl": "/projectSS/pokedex.png",
+        "githubLink": "https://github.com/aman9483/PokeDex",
+        "deployedLink": "https://pokedex-aman9483.vercel.app/pokemon/1",
+        "tech": [
+          {
+            "tech": "/skillsLogos/react.png"
+          },
+          {
+            "tech": "/skillsLogos/tailwind.png"
+          },
+          {
+            "tech": "/skillsLogos/firebase.png"
+          },
+          {
+            "tech": "/skillsLogos/typescript.png"
+          }
+        ]
+        
+      },
+
+      {
+        "id": 6,
+        "title": "Crypto Creek: Real-Time Cryptocurrency Price Tracker",
+        "content": "Crypto Creek is a responsive web application that provides real-time updates on cryptocurrency prices. Stay informed with live price tracking, explore detailed stats, and monitor market trends of your favorite cryptocurrencies all in one place.",
+        "imgurl": "/projectSS/crypto.png",
+        "githubLink": "https://github.com/aman9483/CryptoCreek-REAL-TIME-CRYPTO-PRICE-CHECKER",
+        "deployedLink": "https://cryptocreeks.netlify.app/crypto-Page",
+        "tech": [
+          {
+            "tech": "/skillsLogos/react.png"
+          },
+          {
+            "tech": "/skillsLogos/tailwind.png"
+          }
+        ]
+      },
+      
+      {
+        "id": 6,
+        "title": "Play Mirror: A Video Streaming Platform",
+        "content": "Play Mirror introduces a seamless and responsive video streaming experience, allowing you to effortlessly explore and play videos across various categories.",
+        "imgurl": "/projectSS/play.png",
+        "githubLink": "https://github.com/aman9483/Play-Mirror",
+        "deployedLink": "https://play-mirror.vercel.app/",
+        "tech": [
+          {
+            "tech": "/skillsLogos/react.png"
+          },
+          {
+            "tech": "/skillsLogos/tailwind.png"
+          }
+         
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Portfolio",
+        "content": "Nexts was used to create the portfolio website. TailwindCSS and Framer motion were used to style the website. Sanity is utilised as a content management system.",
+        "imgurl": "/projectSS/potfolio.png",
+        "githubLink": "https://github.com/Nick-h4ck3r/portfolio-nextjs-latest",
+        "deployedLink": "https://nikhilkadam.vercel.app/",
+        "tech": [
+          {
+            "tech": "/skillsLogos/next-js.png"
+          },
+          {
+            "tech": "/skillsLogos/tailwind.png"
+          },
+
+          {
+            "tech": "/skillsLogos/shadcn.png"
+          },
+          {
+            "tech": "/skillsLogos/framer.png"
+          }
+        ]
+      }
+      
+      
+    ]
+  }
+}
