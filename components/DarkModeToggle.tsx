@@ -2,24 +2,28 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 export default function DarkModeToggle() {
+  // Set the initial state to true so it defaults to dark mode
+  const [isDarkMode, setIsDarkMode] = useState(true);
+
+  // Function to apply the theme from local storage if available, otherwise default to dark mode
   function applyThemeFromLocalStorage() {
     const storedTheme = localStorage.getItem("theme");
-    storedTheme === "dark"
-      ? document.documentElement.classList.add("dark")
-      : document.documentElement.classList.remove("dark");
+    if (storedTheme) {
+      storedTheme === "dark"
+        ? document.documentElement.classList.add("dark")
+        : document.documentElement.classList.remove("dark");
+      setIsDarkMode(storedTheme === "dark");
+    } else {
+      // Default to dark mode
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+      setIsDarkMode(true);
+    }
   }
 
   // Apply the theme on app startup
   useEffect(() => {
     applyThemeFromLocalStorage();
-  }, []);
-
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
-  useEffect(() => {
-    // Check if dark mode is enabled and update the state
-    const storedTheme = localStorage.getItem("theme");
-    setIsDarkMode(storedTheme === "dark");
   }, []);
 
   const toggleDarkMode = () => {
@@ -43,7 +47,7 @@ export default function DarkModeToggle() {
         <motion.svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
-          fill="currentColor"
+          fill="white" // Set icon color to white in dark mode
           className="w-6 h-6"
           animate={{
             rotate: 90,
@@ -55,7 +59,7 @@ export default function DarkModeToggle() {
         <motion.svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
-          fill="currentColor"
+          fill="black" // Set icon color to black in light mode
           className="w-6 h-6"
           animate={{
             rotate: -90,

@@ -16,7 +16,7 @@ export default function Contact({}: Props) {
         <div className="flex flex-wrap gap-6 justify-center font-outfit text-xl font-extralight text-gray-500 mt-14">
           {/* Removed YouTube and Blog Links */}
           <p className="hover:text-black dark:hover:text-gray-300 duration-200">
-            <a href="https://twitter.com/NickK2305">twitter</a>
+            <a href="https://x.com/yoaman17">twitter</a>
             <span className="inline-flex">
               <svg
                 className="with-icon_icon__MHUeb"
@@ -60,7 +60,7 @@ export default function Contact({}: Props) {
             </span>
           </p>
           <p className="hover:text-black dark:hover:text-gray-300 duration-200">
-            <a href="https://github.com/Nick-h4ck3r">github</a>
+            <a href="https://github.com/aman9483">github</a>
             <span className="inline-flex">
               <svg
                 className="with-icon_icon__MHUeb"

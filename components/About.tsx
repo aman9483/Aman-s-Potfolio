@@ -1,122 +1,135 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-
+import { FiMail, FiLinkedin, FiCopy } from "react-icons/fi"; // Added icons from React Icons
 import profilePic from "public/extraImages/profilePic.jpg";
 
 type Props = {};
 
 export default function About({}: Props) {
+  const [copied, setCopied] = useState(false);
+
+  // Copy Gmail function
+  const handleCopyGmail = () => {
+    navigator.clipboard.writeText("amankumarverma251@gmail.com");
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000); // Show copied message for 2 seconds
+  };
+
   return (
-    <motion.div
-      initial={{
-        opacity: 0,
-      }}
-      whileInView={{
-        opacity: 1,
-      }}
-      transition={{
-        duration: 1.5,
-      }}
-      viewport={{
-        once: true,
-      }}
-      className="flex flex-col relative h-screen text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center pt-16 lg:pt-28"
+    <motion.section
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1.2 }}
+      viewport={{ once: true }}
+      className="flex flex-col md:flex-row h-screen text-center md:text-left max-w-7xl px-8 lg:px-12 mx-auto items-center justify-center space-y-12 md:space-y-0 md:space-x-8 relative"
     >
-      <h3 className="ml-6 absolute top-[12%] md:top-32 uppercase tracking-[20px] text-gray-400 text-2xl">
+      {/* Section Title */}
+      <h3 className="absolute top-20 md:top-24 uppercase tracking-[18px] text-gray-400 text-2xl">
         About
       </h3>
 
-      <Image
-        width={350}
-        height={450}
-        src={profilePic}
-        className="-mb-28 md:mb-0 md:ml-16 flex-shrink-0 w-40 h-40 rounded-xl object-cover md:rounded-lg md:w-64 md:h-96 xl:w-[350px] xl:h-[450px]"
-        alt="nikhil kadam profile image"
-        priority={false}
-        placeholder="blur"
-      />
+      {/* Profile Image */}
+      <motion.div
+        className="flex-shrink-0 border-4 border-gray-300 dark:border-gray-600 shadow-lg"
+        initial={{ scale: 0.8 }}
+        whileHover={{ scale: 0.9 }}
+        transition={{ type: "spring", stiffness: 400, damping: 10 }}
+      >
+        <Image
+          src={profilePic}
+          alt="Aman Verma Profile"
+          width={300}
+          height={300}
+          className="object-cover w-[280px] h-[280px] md:w-[350px] md:h-[350px]"
+          placeholder="blur"
+          priority
+        />
+      </motion.div>
 
-      <div className="px-0 md:px-8 lg:px-20 text-black dark:text-white">
-        <h4 className="text-3xl md:text-4xl font-semibold mt-8 lg:mt-2 font-outfit lg:ml-6 md:ml-6">
+      {/* About Content */}
+      <div className="flex flex-col items-center md:items-start text-gray-700 dark:text-gray-300 px-4 md:px-6 lg:px-8">
+        <h4 className="text-4xl font-bold mt-4 md:mt-0 text-blue-500">
           AMAN VERMA
         </h4>
 
-        <div className="bg-blue-300/20 dark:bg-blue-300/10 py-[6px] md:ml-6 inline-flex items-center rounded-2xl gap-1 mt-2 text-blue-600">
+        {/* Tagline / Status */}
+        <div className="flex items-center mt-4 mb-4 bg-blue-100 dark:bg-blue-600/30 text-blue-600 dark:text-blue-300 rounded-full px-4 py-1 gap-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="icon icon-tabler icon-tabler-point-filled animate-pulse ml-3 h-4 w-4 pt-[2px]"
+            className="h-4 w-4 text-blue-500 animate-pulse"
             viewBox="0 0 24 24"
             strokeWidth="2"
             stroke="currentColor"
-            fill="none"
+            fill="currentColor"
             strokeLinecap="round"
             strokeLinejoin="round"
           >
-            <path
-              stroke="none"
-              d="M0 0h24v24H0z"
-              fill="none"
-            ></path>
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
             <path
               d="M12 7a5 5 0 1 1 -4.995 5.217l-.005 -.217l.005 -.217a5 5 0 0 1 4.995 -4.783z"
               strokeWidth="0"
               fill="currentColor"
             ></path>
           </svg>
-          <p className="font-outfit mr-5 text-[12px] font-light">
-            open to opportunities
-          </p>
+          <p className="text-sm font-medium">Open to opportunities</p>
         </div>
 
-        <p className="text-sm md:text-base lg:text-lg font-light md:px-7 pt-3 font-outfit">
-          Welcome to my digital abode! <br />
-          <br /> I am a{" "}
-          <span className="text-blue-500 font-semibold">
+        {/* Description */}
+        <p className="text-base md:text-lg leading-relaxed max-w-2xl font-light text-justify">
+          Welcome to my digital abode! I am a{" "}
+          <span className="font-semibold text-blue-500">
             full stack developer
           </span>{" "}
           with a passion for building scalable and user-friendly web
           applications. I love to create elegant solutions to complex problems.
-          <br />
-          I believe in achieving a perfect blend of UI architecture, where goals and needs are elegantly, efficiently, and robustly designed.
-          <span className="text-blue-500 font-semibold">
-            <a
-              href="https://instagram.com/localhostcoders"
-              target={"_blank"}
-              rel="noreferrer"
-            >
-             
-              <span className="inline-flex text-black dark:text-white">
-                <svg
-                  className="with-icon_icon__MHUeb"
-                  data-testid="geist-icon"
-                  fill="none"
-                  height="24"
-                  shapeRendering="geometricPrecision"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="1.5"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  style={{
-                    color: "currentColor",
-                    width: "14px",
-                    height: "14px",
-                  }}
-                >
-                  <path d="M7 17L17 7"></path>
-                  <path d="M7 7h10v10"></path>
-                </svg>
-              </span>
-            </a>
-          </span>
-          Experienced in ReactJS, React Native, NextJS, and state management like Redux, with proficiency in web technologies such as HTML5, CSS3, JavaScript, Node.js, Express.js, MongoDB. Skilled in building large-scale web applications, ensuring compatibility across various browsers and adhering to design constraints on the web. Also adept at creating responsive user interfaces. 
-          <span className="text-blue-500 font-semibold">
-            ~ Patna Bihar India
-          </span>
+          I believe in achieving a perfect blend of UI architecture, where goals
+          and needs are elegantly, efficiently, and robustly designed.
+          Experienced in ReactJS, React Native, NextJS, and state management
+          like Redux, with proficiency in web technologies such as HTML5, CSS3,
+          JavaScript, Node.js, Express.js, and MongoDB. Skilled in building
+          large-scale web applications, ensuring compatibility across various
+          browsers and adhering to design constraints on the web. Also adept at
+          creating responsive user interfaces.
         </p>
+
+        {/* Location */}
+        <p className="mt-4 text-sm md:text-base text-gray-500 dark:text-gray-400 font-medium flex items-center">
+          <span role="img" aria-label="India Flag" className="mr-2">
+            🇮🇳
+          </span>
+          Patna, Bihar, India
+        </p>
+
+        {/* Social Links and Contact Info */}
+        <div className="flex flex-col md:flex-row items-center justify-center md:justify-start mt-6 gap-6">
+          {/* Gmail Section */}
+          <div
+            onClick={handleCopyGmail}
+            className="flex items-center bg-blue-500 dark:bg-blue-700 text-white px-4 py-2 rounded-full cursor-pointer hover:scale-105 transition-transform"
+          >
+            <FiMail className="w-5 h-5 mr-2" />
+            <span>Copy Gmail</span>
+            <FiCopy className="ml-2 w-4 h-4" />
+            {copied && (
+              <span className="ml-4 text-sm bg-green-400 text-white px-2 py-1 rounded-md">
+                Copied!
+              </span>
+            )}
+          </div>
+
+          {/* LinkedIn */}
+          <a
+            href="https://www.linkedin.com/in/aman-verma-3014a9226/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center bg-blue-500 dark:bg-blue-700 text-white px-4 py-2 rounded-full hover:scale-105 transition-transform"
+          >
+            <FiLinkedin className="w-5 h-5 mr-2" />
+            <span>LinkedIn</span>
+          </a>
+        </div>
       </div>
-    </motion.div>
+    </motion.section>
   );
 }
